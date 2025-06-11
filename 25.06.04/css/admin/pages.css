@@ -1,0 +1,174 @@
+/* 설정 타이틀 */
+h1 {
+  margin: 0 0 30px 10px;
+}
+
+.status span {
+  color: green;
+}
+
+/* 메인 */
+.main-content {
+  flex: 1;
+  padding: 2% 4%;
+}
+
+.page-setting {
+  display: flex;
+  border: 1px solid #dedede;
+  background: #ffffff;
+  border-radius: 30px;
+  height: 100%;
+}
+
+.page {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 300px;
+}
+
+.page-setting input {
+  padding: 10px;
+  margin: 10px 20px 18px 100px;
+  width: 100%;
+  height: 37px;
+  border-radius: 10px;
+  background: #efefef;
+  border: 1px solid #dfdfdf;
+}
+
+.body div {
+  width: 100%;
+  height: 80px;
+  border-bottom: 1px solid #dfdfdf;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.body div:nth-last-child(1) {
+  border-bottom: none;
+}
+
+.body > div h4 {
+  flex-shrink: 0;
+  width: 120px;
+  margin: 15px;
+}
+
+select {
+  margin-right: 20px;
+  width: 15%;
+}
+
+.body > div label.switch {
+  margin-left: auto;
+  margin-right: 20px;
+}
+
+/* radio 설정 */
+input[name="fontsize"] {
+  margin: 5px;
+  width: auto;
+  height: auto;
+}
+
+section.radios {
+  margin-right: 20px;
+}
+
+/* hidden div 설정 */
+div#memberInputContainer {
+  display: inline-table;
+}
+
+.hidden {
+  border-bottom: none !important;
+}
+
+/* save 버튼 디자인 */
+.btn {
+  text-align: right;
+}
+
+.btn button {
+  height: 40px;
+  width: 120px;
+  margin: 40px 5px 0 0;
+  border: 3px solid #104e4a;
+  border-radius: 10px;
+  background-color: transparent;
+  color: #104e4a;
+}
+
+/* On/Off 스위치 디자인 */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 28px;
+  margin-left: 350px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 22px;
+  width: 22px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #104e4a;
+}
+
+input:checked + .slider:before {
+  transform: translateX(22px);
+}
+
+/* 공유할 멤버 추가 */
+#memberTagContainer {
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+  padding: 0 20px 0 250px;
+  height: 50px;
+}
+
+/* 삭제버튼 */
+button.deleteBtn {
+  width: 50px;
+  padding: 4px;
+  background: none;
+  border: 1px solid darkred;
+  color: orangered;
+  margin-right: 20px;
+}
+
+button.deleteBtn:hover {
+  background-color: #0c5550;
+  color: white;
+}

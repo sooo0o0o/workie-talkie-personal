@@ -1,0 +1,96 @@
+/* 헤더 + 타이틀 */
+h1 {
+  margin: 0 0 40px 10px;
+}
+
+.status span {
+  color: green;
+}
+
+/* 메인 */
+.row1,
+.row2 {
+  display: flex;
+  gap: 20px;
+}
+
+.row1 > div {
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.main-content {
+  flex: 1;
+  padding: 2% 4%;
+}
+.main-content h3 {
+  font-weight: 500;
+}
+.main-content article {
+  background-color: #ffffff;
+  border-radius: 10px;
+}
+
+.free article,
+.library article,
+.menu article {
+  margin: 10px 5px 5px 5px;
+  border: 1px solid rgb(199, 229, 255);
+  padding: 10px;
+  border-radius: 0 10px 10px 10px;
+}
+
+/* 공지사항 */
+.notices {
+  height: 230px;
+  padding: 15px;
+  border: 2px solid #598be9;
+  border-radius: 0 10px 10px 10px;
+}
+.notices table {
+  margin-top: 10px;
+  border-spacing: 0;
+  width: 100%;
+  text-align: center;
+}
+.notices thead {
+  background-color: #3a64b1;
+  color: #ffffff;
+}
+.notices tbody td {
+  border-bottom: 1px solid #3a64b1;
+}
+
+/* 자유게시판 */
+.free {
+  height: 420px;
+  width: 40%;
+  padding: 15px;
+  margin-top: 30px;
+  border: 2px solid #9bd8d4;
+  border-radius: 0 10px 10px 10px;
+}
+
+/* NEW */
+.library {
+  height: 420px;
+  width: 40%;
+  padding: 15px;
+  margin-top: 30px;
+  border: 2px solid #2caba3;
+  border-radius: 0 10px 10px 10px;
+}
+
+/* 식단표 */
+.menu {
+  height: 420px;
+  width: 30%;
+  padding: 15px;
+  margin-top: 30px;
+  border: 2px solid #67a6e6;
+  border-radius: 0 10px 10px 10px;
+}
+.details {
+  border-left: 2px solid #67a6e6;
+  padding: 0 5%;
+}
