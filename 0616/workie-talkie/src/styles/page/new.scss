@@ -1,0 +1,227 @@
+#writes {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+
+  .main-content-wrapper {
+    flex-grow: 1;
+    display: flex;
+    overflow: hidden; // 좌우 구성 고정
+  }
+
+  .main-editor-area {
+    flex: 1;
+    overflow: hidden; // 여기서도 전체 스크롤 제거
+    display: flex;
+    flex-direction: column;
+  }
+
+  .main-header img {
+    width: 20px;
+  }
+  .notion-style-sidebar {
+    overflow-y: auto; // 필요시 별도 스크롤
+  }
+
+  #page-writes-container {
+    background-color: #ffffff;
+    height: 100%;
+    flex: 1;
+    overflow-y: auto; // ✅ 여기만 스크롤 허용
+    padding-right: 10px; // 스크롤바 영역 확보
+
+    #submitBtn {
+      padding: 0.5rem 1rem;
+      background-color: transparent;
+      color: #333;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: 500;
+    }
+    #submitBtn:hover {
+      background-color: #e0e0e0;
+    }
+
+    .title-field input {
+      border: none;
+      height: 50px;
+      font-size: 30px;
+      background-color: transparent;
+      padding: 10px;
+    }
+
+    .ql-toolbar.ql-snow {
+      border: none;
+      box-sizing: border-box;
+      font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+      padding: 8px;
+    }
+    .ql-container.ql-snow {
+      border: none;
+    }
+
+    #qull-element {
+      height: 100%; /* 부모가 제한되어 있으면 이 방식 사용 가능 */
+      min-height: 300px;
+      max-height: 600px;
+    }
+
+    .ql-container {
+      height: 100%;
+    }
+
+    .ql-editor {
+      height: 100%;
+      overflow-y: auto;
+    }
+  }
+
+  //공유하기버튼
+  .main-header {
+    /* Specific to editor area, not app-header */
+    display: flex;
+    justify-content: flex-end;
+    margin: 10px;
+  }
+
+  .share-btn {
+    padding: 0.5rem 1rem;
+    background-color: transparent;
+    color: #333;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+  }
+  .share-btn:hover {
+    background-color: #e0e0e0;
+  }
+
+  /* 공유하기 모달(예정) */
+  .share-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    transform: translate(-50%, -50%);
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    z-index: 999;
+    border: 1px solid #dfdfdf;
+  }
+
+  .close-modal-btn {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    background: transparent;
+    border: none;
+
+    cursor: pointer;
+  }
+
+  .share-modal.show {
+    display: block;
+  }
+
+  .share-modal h3 {
+    font-size: 16px;
+    margin-bottom: 15px;
+    font-weight: 600;
+  }
+
+  .share-input-group {
+    display: flex;
+    align-items: center;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    padding: 8px 12px;
+    margin-bottom: 15px;
+  }
+  .share-input-group input {
+    border: none;
+    outline: none;
+    flex-grow: 1;
+    font-size: 14px;
+    margin-left: 8px;
+  }
+  .share-input-group input::placeholder {
+    color: #bbb;
+  }
+  .share-input-group i {
+    color: #999;
+  }
+
+  .share-permission-list {
+    list-style: none;
+    padding: 0;
+  }
+
+  .share-permission-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #f0f0f0;
+  }
+  .share-permission-item:last-child {
+    border-bottom: none;
+  }
+
+  .share-user-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .share-user-info img {
+    width: 30px;
+    height: 30px;
+    border-radius: 3px;
+  }
+  .share-user-info span {
+    font-size: 14px;
+    color: #333;
+  }
+  .share-permission-dropdown {
+    position: relative;
+  }
+  .share-permission-dropdown button {
+    padding: 6px 10px;
+    background-color: #f0f0f0;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    font-size: 12px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+  }
+  .share-permission-dropdown button:hover {
+    background-color: #e8e8e8;
+  }
+  .share-permission-options {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    z-index: 1001;
+  }
+  .share-permission-options.show {
+    display: block;
+  }
+  .share-permission-options li {
+    padding: 8px 10px;
+    font-size: 12px;
+    cursor: pointer;
+    text-align: left;
+  }
+  .share-permission-options li:hover {
+    background-color: #f1f3f5;
+  }
+}

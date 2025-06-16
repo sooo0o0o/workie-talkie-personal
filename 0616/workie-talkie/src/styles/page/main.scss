@@ -1,0 +1,166 @@
+#page {
+  padding: 0;
+
+  .main-content-wrapper {
+    /* Renamed from .container and .main-layout */
+    display: flex; /* Use flexbox for horizontal arrangement */
+    flex-grow: 1; /* Makes this section fill remaining vertical space */
+    overflow: hidden; /* Prevents scrollbars from nested elements if content overflows */
+  }
+
+  /* Main Content Area (Card Grid) */
+  .main-editor-area {
+    flex: 1; /* Takes remaining horizontal space */
+    padding: 2%;
+    overflow-y: auto;
+  }
+
+  .main-editor-area h3 {
+    margin: 30px 0 10px 0;
+  }
+
+  /* Generic Button (used in page header) */
+  .btn {
+    padding: 0.5rem 1rem;
+    background-color: #4f83f1;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .btn:hover {
+    background-color: #3b6edc;
+  }
+
+  /* Page Header within Main Content */
+  .page-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2rem; /* Add space below header */
+  }
+  .page-header h1 {
+    font-size: 24px;
+    color: #333;
+  }
+
+  .page-dashboard {
+    padding: 30px;
+  }
+
+  .dashboard-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+
+  .page-grid {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    gap: 12px;
+    overflow-y: auto; /* 수직 스크롤 */
+    padding: 0 20px; /* 스크롤바 때문에 오른쪽 여백 확보 */
+  }
+
+  .page-card {
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background: #fff;
+    width: 130px;
+    height: 130px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+    align-items: center;
+    text-align: center;
+  }
+
+  .page-card:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  }
+
+  .tooltip-wrapper {
+    position: relative;
+  }
+
+  .tooltip-content {
+    display: none;
+    position: absolute;
+    top: 20%;
+    left: -10%;
+    width: max-content;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 5px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+    font-size: 14px;
+    width: 160px;
+    overflow: hidden;
+  }
+
+  /* 마우스 올리면 보이기 */
+  .tooltip-wrapper:hover .tooltip-content {
+    display: block;
+  }
+
+  .card-header {
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .card-header h3 {
+    font-size: 18px;
+  }
+
+  .card-body p {
+    font-size: 14px;
+    color: #555;
+    margin: 4px 0;
+  }
+
+  .tag-list {
+    margin-top: 10px;
+  }
+
+  .shared img {
+    width: 23px;
+  }
+
+  .tag.favorite {
+    background-color: #ffe066;
+    color: #5d3b09;
+    font-size: 0.75rem;
+    border-radius: 6px;
+    width: 80px;
+  }
+
+  .favorite-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  .favorite-btn img {
+    width: 35px;
+  }
+
+  .status-bar {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    display: flex;
+    align-items: center;
+  }
+
+  @media (max-width: 1200px) {
+    .page-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 12px;
+      padding: 0 20px; /* 스크롤바 때문에 오른쪽 여백 확보 */
+    }
+  }
+}
